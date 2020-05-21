@@ -1,0 +1,56 @@
+#include<iostream>
+#include<stdio.h>
+#include<string>
+
+class People
+{
+private:
+	string name;
+	int age;
+public:
+	People(string n, int a):name(n), age(a)
+	{
+		
+	}
+
+	~People()
+	{
+	
+	}
+
+	string getAge()
+	{
+		return age;
+	}
+
+	void setAge(int x)
+	{
+		age = x;
+	}
+
+	void judge()
+	{
+		if(age >= 70)
+			cout << "You are old :)\n";
+		else
+			cout << "You are not that old\n";
+	}
+};
+
+
+
+
+
+int main(int argc, char** argv)
+{
+	int age;
+       	string name;
+	cout << "\nEnter your name: ";
+	cin >> name;
+	cout << "Enter the age: ";
+	cin >> age;
+
+	People p1 = new People(name, age);
+	cout << "-----------------Operating on objects------------------------\n";
+	cout << p1.getAge() << endl;	
+}
